@@ -1,0 +1,25 @@
+
+Qual foi a versão do kernel que você compilou, e por que escolheu essa versão?
+
+R:Compilei o kernel 6.0.7.
+Escolhi essa versão porque era a mais indicada no material e é uma versão estável e recente.
+
+Que configuração você modificou no menuconfig? Por que fez essa modificação? O que espera que essa modificação altere no comportamento do sistema?
+
+R:Eu modifiquei a opção “Processor family” dentro do menu Processor type and features no menuconfig.
+Fiz essa modificação para ajustar o kernel ao tipo de processador do meu computador, escolhendo uma opção mais compatível e otimizada.
+Com essa mudança, espero que o sistema tenha um desempenho melhor e rode de forma mais eficiente, já que o kernel fica mais adequado ao hardware da máquina.
+
+
+Durante a compilação você encontrou algum erro, advertência ou comportamento inesperado? Como resolveu ou o que faria para resolver?
+
+R:Sim, encontrei um erro fatal e um comportamento inesperado. 
+O erro fatal aconteceu porque faltou o arquivo openssl/engine.h durante a compilação, o que indica que o pacote de desenvolvimento openssl-devel não está instalado. 
+O comportamento inesperado foi o comando nproc não ser encontrado ao tentar acelerar o make. 
+Para resolver, vou instalar o pacote openssl-devel e vou mandar o make usar meus núcleos na mão, tipo make -j8, para poder tentar compilar de novo.
+
+Quais os riscos e benefícios de “rodar” um kernel compilado por você mesmo em comparação com usar o kernel padrão da distribuição?
+
+Em quais cenários você considera “vale a pena” compilar seu próprio kernel? Cite ao menos dois.
+
+Se o sistema não inicializar após a compilação/instalação do kernel, qual seria seu plano de contingência para recuperar o sistema?
